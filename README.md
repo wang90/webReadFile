@@ -25,7 +25,11 @@
 <script>
 var reader = new FileReader();
   reader.readAsText(flieValue, "UTF-8");
-  //readAsText(file,[encoding]):将文件读取为文本，encoding缺省为UTF-8   readAsText(selectedFile,'UTF-8')
+  // readAsText(file,[encoding]):将文件读取为文本
+  // encoding缺省为UTF-8   
+  // readAsText(selectedFile,'UTF-8')
+  // 解决txt文本读取会有乱码的问题
+  // readAsText(selectedFile,'GB2312')
   reader.onload = function (oFREvent) {
     //读取完毕从中取值
     console.log(this.result)
